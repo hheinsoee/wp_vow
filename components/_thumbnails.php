@@ -201,7 +201,7 @@ function thumbnail($post, $s = '')
                     if ($post->images['s']) {
                     ?>
                         <div style="position: relative;" class="me-3">
-                            <div style="z-index:1;position: absolute;height:70px; width:100%;" class="d-flex align-items-center justify-content-center">
+                            <div style="position: absolute;height:70px; width:100%;" class="d-flex align-items-center justify-content-center">
                                 <div class="big text-light p-2 d-flex align-items-center justify-content-center" style="width:50px;position:relative;--bs-bg-opacity: .75;">
                                     <?php postFormatStyle($post->post_format ?: 'standard'); ?>
                                 </div>

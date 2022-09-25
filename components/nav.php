@@ -31,10 +31,10 @@
                     <i class="fa-brands fa-youtube fa-lg"></i><span class="d-none d-md-inline">&nbsp;youtube</span>
                 </a>
                 <span type="button" class="mx-1 text-light btn" data-bs-toggle="modal" data-bs-target="#gTranslate">
-                    <i class="fa-solid fa-language"></i><span class="d-none d-md-inline">&nbsp;Translate</span>
+                    <i class="fa-solid fa-language fa-lg"></i><span class="d-none d-md-inline">&nbsp;Translate</span>
                 </span>
                 <span class="btn text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars fa-lg"></i>
                 </span>
             </div>
 
@@ -70,7 +70,7 @@
                     <i class="fa-brands fa-youtube fa-lg"></i><span class="d-none d-md-inline">&nbsp;youtube</span>
                 </a>
                 <span type="button" class="mx-1 text-light btn" data-bs-toggle="modal" data-bs-target="#gTranslate">
-                    <i class="fa-solid fa-language"></i><span class="d-none d-md-inline">&nbsp;Translate</span>
+                    <i class="fa-solid fa-language fa-lg"></i><span class="d-none d-md-inline">&nbsp;Translate</span>
                 </span>
             </div>
         </div>

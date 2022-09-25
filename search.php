@@ -16,11 +16,10 @@ if (have_posts()) :
     endwhile;
 endif;
 ?>
-<div class="container">
+<div class="container p-0">
     <div class="row g-1">
         <div class="col-12 col-lg-9">
-            <div class="">
-
+            <div class="p-2">
                 <h2 class="h6">search result for <span class="h3"><?php the_search_query(); ?></span></h2>
                 <div class="my-2">
                     <?php get_search_form(); ?>
@@ -39,9 +38,8 @@ endif;
                     }
                     ?>
                 </div>
-
-                <?php include __DIR__ . "/components/_pagination.php"; ?>
             </div>
+            <?php include __DIR__ . "/components/_pagination.php"; ?>
         </div>
         <div class="col-12 col-lg-3">
             <div class="container sticky-top myThumb offsetNav">
