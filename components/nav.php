@@ -22,7 +22,7 @@
             </a>
             <div class="d-flex d-lg-none align-items-center">
                 <span type="button" class="mx-1 text-light btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                    <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search
+                    <i class="fa-solid fa-magnifying-glass"></i><span class="d-none d-md-inline">&nbsp;Search</span>
                 </span>
                 <a target="_blank" class="mx-1 px-2" href="https://fb.com/<?= myInfo()['fb_page_id']; ?>" title="<?= myInfo()['fb_page_id']; ?>">
                     <i class="fa-brands fa-facebook fa-lg"></i><span class="d-none d-md-inline">&nbsp;facebook</span>
@@ -61,7 +61,7 @@
 
             <div class="d-none d-lg-flex align-items-center">
                 <span type="button" class="mx-1 text-light btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                    <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search
+                    <i class="fa-solid fa-magnifying-glass"></i><span class="d-none d-md-inline">&nbsp;Search</span>
                 </span>
                 <a target="_blank" class="mx-1 px-2" href="https://fb.com/<?= myInfo()['fb_page_id']; ?>" title="<?= myInfo()['fb_page_id']; ?>">
                     <i class="fa-brands fa-facebook fa-lg"></i><span class="d-none d-md-inline">&nbsp;facebook</span>
