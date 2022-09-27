@@ -17,6 +17,23 @@ function heinseo()
     $url = esc_url(get_permalink());
     $img = get_the_post_thumbnail_url();
 
+
+
+
+
+
+
+    if (is_front_page() || is_home()) {
+        $title = get_bloginfo('name');;
+        $description = get_bloginfo('description');
+        $url = esc_url(get_permalink());
+        $img = get_template_directory_uri() . '/vow.jpg';
+    } else {
+        $title = get_the_title();
+        $description = get_the_excerpt();
+        $url = esc_url(get_permalink());
+        $img = get_the_post_thumbnail_url();
+    };
     // KEYWORD GENERATER ///////////////
     $keywords = [];
     if (get_post_meta(get_the_id(), 'seo', true)) {
