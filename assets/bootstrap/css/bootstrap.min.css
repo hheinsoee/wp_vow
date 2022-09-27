@@ -41,12 +41,12 @@
     --bs-light-rgb: 253, 241 ,255;
     --bs-dark-rgb: 33, 37, 41;
 
-    --bs-primary-h: 200deg;
+    --bs-primary-h: 215deg;
     /* --bs-primary-h: 276deg; */
     /* --bs-primary-h: 212deg; */
     /* --bs-primary-h: 20deg; */
-    --bs-s: 70%;
-    --bs-l: 25%;
+    --bs-s: 60%;
+    --bs-l: 30%;
     --bs-secondary-h: calc(var(--bs-primary-h) + 30deg);
 
     --bs-light-h: 25;
@@ -67,7 +67,7 @@
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
 
-    --dark:hsl(var(--bs-secondary-h), 20% , 25%);
+    --dark:hsl(var(--bs-primary-h), 20% , 25%);
     --dark-invert:hsl(var(--bs-primary-h), 20% , 99%);
     --bs-body-color: var(--dark);
     --bs-body-bg: var(--dark-invert);
