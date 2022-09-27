@@ -54,7 +54,7 @@ endif;
             for ($x = 6; $x <= 9; $x++) {
             ?>
                 <div class="<?php echo  $x < 7 ? 'col-6':'col-12';?> col-md-4 col-lg-3 col-xl-12">
-                    <?php thumbnail($myposts[$x], $x < 7 ? 'card' : ""); ?>
+                    <?php thumbnail($myposts[$x], $x < 7 ? 'card' : "list"); ?>
                 </div>
             <?php
             }

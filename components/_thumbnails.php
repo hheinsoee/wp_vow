@@ -193,6 +193,37 @@ function thumbnail($post, $s = '')
         <?php
             break;
 
+        case 'list':
+        ?>
+            <a href="<?php echo $post->url; ?>">
+                <div class="postThumbnail d-flex">
+                    <?php
+                    if ($post->images['s']) {
+                    ?>
+                        <div style="position: relative;" class="me-3">
+                            <div style="position: absolute;height:70px; width:100%;" class="d-flex align-items-center justify-content-center">
+                                <div class="big text-light p-2 d-flex align-items-center justify-content-center" style="width:50px;position:relative;--bs-bg-opacity: .75;">
+                                    <?php postFormatStyle($post->post_format ?: 'standard'); ?>
+                                </div>
+                            </div>
+                            <img loading="lazy" alt="<?php echo $post->post_title; ?>" src="<?php echo $post->images['s']; ?>" style="width:70px;min-height:70px;height:70px;object-fit:cover" />
+                        </div>
+                    <?php
+                    };
+                    ?>
+                    <div>
+                        <h3 class="h6">
+                            <?php echo $post->post_title; ?>
+                        </h3>
+                        <date>
+                            <?php echo date_format(date_create($post->post_modified), "d-M Y"); ?>
+                        </date>
+                    </div>
+                </div>
+                <hr>
+            </a>
+        <?php
+            break;
         default:
         ?>
             <a href="<?php echo $post->url; ?>">

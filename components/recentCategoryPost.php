@@ -44,7 +44,7 @@ $length = count($terms);
                             );
                     ?>
                         <div class="m-2">
-                            <?php thumbnail($mypost,  $counter < 1 ? 'card' : ""); ?>
+                            <?php thumbnail($mypost,  $counter < 1 ? 'card' : "list"); ?>
                         </div>
                     <?php
                         $counter++;
