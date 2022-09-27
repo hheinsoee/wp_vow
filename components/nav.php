@@ -15,7 +15,7 @@
                 <?php
                 } else {
                 ?>
-                    <h1 class="h4"><?php echo get_bloginfo('name'); ?></h1>
+                    <h1 class="h4 notranslate"><?php echo get_bloginfo('name'); ?></h1>
                 <?php
                 }
                 ?>
@@ -95,13 +95,12 @@
 <!-- Modal -->
 <div class="modal fade" id="gTranslate" tabindex="-1" aria-labelledby="gTranslateLabel" aria-hidden="true" style="z-index: 9991;">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content text-dark">
             <div class="modal-header">
                 <h5 class="modal-title" id="gTranslateLabel">Translate</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-
                 <div id="google_translate_element"></div>
                 <script type="text/javascript">
                     function googleTranslateElementInit() {

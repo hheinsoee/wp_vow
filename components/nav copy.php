@@ -20,7 +20,7 @@ style="z-index: 9991;"
             }
             ?>
             <div style="line-height: 1vmin;" class="d-none d-sm-block">
-                <h1 class="h4 my-1"><?= get_bloginfo('name'); ?></h1>
+                <h1 class="h4 my-1 notranslate"><?= get_bloginfo('name'); ?></h1>
                 <div style="position:absolute;font-size:9pt;"><?= get_bloginfo('description'); ?></div>
             </div>
         </a>

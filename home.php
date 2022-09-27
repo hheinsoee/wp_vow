@@ -20,7 +20,7 @@ opacity:0.7;
     <center class="p-3 py-5">
 
         <div style="line-height: 1vmin;">
-            <h1 class=" my-1"><?php echo get_bloginfo('name'); ?></h1>
+            <h1 class=" my-1 notranslate"><?php echo get_bloginfo('name'); ?></h1>
             <div><?php echo get_bloginfo('description'); ?></div>
         </div>
         <div class="my-4">

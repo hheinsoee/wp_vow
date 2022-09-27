@@ -16,23 +16,23 @@ height: 10vmin;
 /* filter: drop-shadow(3px 0 0 white) drop-shadow(0 3px 0 white) drop-shadow(-3px 0 0 white) drop-shadow(0 -3px 0 white); */
 max-height: 100px;
 min-height: 50px;
-" src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo get_bloginfo('name'); ?>" class="bi me-2 logo">
+" src="<?php echo esc_url($logo[0]); ?>"  alt="<?php echo get_bloginfo('name'); ?>" class="notranslate bi me-2 logo">
                         &nbsp;
                     <?php
                     }
                     ?>
                     <div>
-                        <div class="h1 text-light"><?= get_bloginfo('name'); ?></div>
+                        <div class="h1 text-light notranslate"><?= get_bloginfo('name'); ?></div>
 
                         <div>
-                            <?= get_bloginfo('description'); ?>
+                            <?php echo  get_bloginfo('description'); ?>
                         </div>
                     </div>
                 </a>
-                <p class="low"><?= get_bloginfo('name'); ?> © <?= date("Y"); ?></p>
+                <p class="low notranslate"><?php echo  get_bloginfo('name'); ?> © <?= date("Y"); ?></p>
             </center>
             <hr>
-            <div class="col-12 col-sm-6 col-md-4 mb-3">
+            <div class="col-12 col-sm-6 col-md-4 mb-3 notranslate">
 
                 <ul class="nav flex-column">
                     <?php
