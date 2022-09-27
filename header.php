@@ -35,6 +35,7 @@
 
         img,
         .img {
+            background-color: hsl(var(--bs-primary-h), 20% , 30%);
             background-image: url(<?php echo $imgbg; ?>);
             background-size: 40%;
             background-repeat: no-repeat;
@@ -43,6 +44,7 @@
 
         img.logo,
         nav img {
+            background-color: transparent;
             background-image: none !important;
         }
     </style>

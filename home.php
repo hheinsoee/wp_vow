@@ -12,31 +12,50 @@ right:0;
 z-index:-1;
 display:flex;
 justify-content:center;
-opacity:0.1;
-">
+opacity:0.7;
+" class="mapSvg">
+    <?php echo file_get_contents(__DIR__ . "/assets/images/world_map_low_resolution.svg"); ?>
+    <script>
+        var p = document.querySelectorAll("path");
+        var l = p.length;
+        setInterval(function() {
+            var ramN = Math.floor(Math.random() * (l - 0 + 1) + 0);
+            var hue = Math.floor(Math.random() * (360 - 0 + 1) + 0);
+            p[ramN].style.fill = "hsla(" + hue + ", 50%, 20%, 50%)";
+        }, 10);
+    </script>
 </div>
 
 <div class=" ">
+    <center class="p-3 py-5">
 
+        <div style="line-height: 1vmin;">
+            <h1 class=" my-1"><?php echo get_bloginfo('name'); ?></h1>
+            <div><?php echo get_bloginfo('description'); ?></div>
+        </div>
+        <div class="my-4">
+            <small><?php echo date('l F j Y'); ?></small>
+        </div>
+    </center>
     <script>
-        // document.documentElement.style.setProperty('--bs-body-color', 'var(--dark-invert)');
-        // document.documentElement.style.setProperty('--bs-body-bg', 'var(--dark)');
-        // document.querySelector('.mapSvg').style.opacity = 1;
-        // const winH = window.innerHeight;
-        // window.addEventListener('scroll', function() {
-        //     let scroll_top = window.scrollY;
-        //     let isOver = scroll_top > winH
-        //     if (isOver) {
-        //         document.documentElement.style.setProperty('--bs-body-color', 'var(--dark)');
-        //         document.documentElement.style.setProperty('--bs-body-bg', 'var(--dark-invert)');
-        //         document.querySelector('.mapSvg').style.opacity = 0.2;
+        document.documentElement.style.setProperty('--bs-body-color', 'var(--dark-invert)');
+        document.documentElement.style.setProperty('--bs-body-bg', 'var(--dark)');
+        document.querySelector('.mapSvg').style.opacity = 1;
+        const winH = window.innerHeight;
+        window.addEventListener('scroll', function() {
+            let scroll_top = window.scrollY;
+            let isOver = scroll_top > winH
+            if (isOver) {
+                document.documentElement.style.setProperty('--bs-body-color', 'var(--dark)');
+                document.documentElement.style.setProperty('--bs-body-bg', 'var(--dark-invert)');
+                document.querySelector('.mapSvg').style.opacity = 0.1;
 
-        //     } else {
-        //         document.documentElement.style.setProperty('--bs-body-color', 'var(--dark-invert)');
-        //         document.documentElement.style.setProperty('--bs-body-bg', 'var(--dark)');
-        //         document.querySelector('.mapSvg').style.opacity = 1;
-        //     }
-        // });
+            } else {
+                document.documentElement.style.setProperty('--bs-body-color', 'var(--dark-invert)');
+                document.documentElement.style.setProperty('--bs-body-bg', 'var(--dark)');
+                document.querySelector('.mapSvg').style.opacity = 0.7;
+            }
+        });
     </script>
     <?php
     include_once __DIR__ . "/components/head10post.php";

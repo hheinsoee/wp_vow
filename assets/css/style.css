@@ -133,11 +133,8 @@ date {
 }
 .mapSvg svg {
     /* mix-blend-mode: multiply; */
-    width: 100vmax;
+    /* height: 100vh!important; */
     /* filter: brightness(0.3); */
-}
-.mapSvg {
-    opacity: 0.1;
 }
 .mapSvg path {
     fill: hsla(var(--bs-primary-h), 40%, 20%, 50%);
