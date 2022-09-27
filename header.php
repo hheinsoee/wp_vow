@@ -10,6 +10,19 @@
     wp_head();
     ?>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+    <?php $gTagId = 'G-3VBXLTL185'; ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $gTagId; ?>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', '<?php echo $gTagId; ?>');
+    </script>
     <style>
         <?php
         // if (has_custom_logo()) {
@@ -35,7 +48,7 @@
 
         img,
         .img {
-            background-color: hsl(var(--bs-primary-h), 20% , 30%);
+            background-color: hsl(var(--bs-primary-h), 20%, 30%);
             background-image: url(<?php echo $imgbg; ?>);
             background-size: 40%;
             background-repeat: no-repeat;
