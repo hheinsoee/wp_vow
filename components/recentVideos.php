@@ -49,13 +49,13 @@
                 $backgroundSize = "cover";
             } else {
 
-                $backgroundImage = '';//get_template_directory_uri() . '/assets/images/vow_watermark.png';
+                $backgroundImage = ''; //get_template_directory_uri() . '/assets/images/vow_watermark.png';
                 $backgroundSize = '70vmin';
             }
             ?>
             <div style="       
             background-image:url(<?php echo $backgroundImage; ?>);
-            background-size:<?php echo $backgroundSize;?>;
+            background-size:<?php echo $backgroundSize; ?>;
             background-attachment:fixed;
             background-repeat:no-repeat;
             background-position:center
@@ -63,12 +63,10 @@
                 <div style="--bs-bg-opacity: .7;" class="bg-primary text-light">
                     <div style="min-height:70vh;" class="d-flex flex-column justify-content-between container">
 
-
-
                         <div class="my-5 py-5">
-                            <h2 style="font-size: 10vmin;"><i class="fa-solid fa-play"></i>&nbsp;Videoes</h2>
-                            <div>
-                                <div class="d-md-flex">
+                            <h2 style="font-size: 8vmin;"><i class="fa-solid fa-play"></i>&nbsp;Videos</h2>
+                            <div class="mt-4">
+                                <div class="d-md-flex flex-row-reverse">
                                     <div style="flex:1"><?php thumbnail($recentVideos[0], 'feature_'); ?></div>
                                     <div style="flex:0.1"></div>
                                     <div style="flex:1.4" class="py-2">
@@ -82,6 +80,31 @@
                                         <div class="low">
                                             <?php echo wp_trim_words($recentVideos[0]->post_excerpt, 24, ' ..more...'); ?>
                                         </div>
+                                        <div class="my-3">
+                                            <a type="button" id="share_<?php echo $recentvideos[0]->id; ?>">
+                                                <i class="fa fa-share-alt"></i> share
+                                            </a>
+                                        </div>
+                                        <script>
+                                            const shareData = {
+                                                title: '<?php echo get_the_title(); ?>',
+                                                text: '<?php echo wp_trim_words($post->post_excerpt, 30, ' ..more...'); ?>',
+                                                url: '<?php echo esc_url(get_permalink()); ?>',
+                                            }
+
+                                            const btn = document.getElementById('share_<?php echo $recentvideos[0]->id; ?>');
+                                            // const resultPara = document.querySelector('.result');
+
+                                            // Must be triggered some kind of "user activation"
+                                            btn.addEventListener('click', async () => {
+                                                try {
+                                                    await navigator.share(shareData)
+                                                    // resultPara.textContent = 'MDN shared successfully'
+                                                } catch (err) {
+                                                    // resultPara.textContent = 'Error: ' + err
+                                                }
+                                            });
+                                        </script>
                                     </div>
 
 

@@ -27,12 +27,12 @@ endif;
     <h2 class="d-none">Latest post</h2>
     <div class="row g-2">
         <div class=" col-12 col-md-12 col-lg-12 col-xl-9">
-            <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-4">
-                    <?php thumbnail($myposts[1],'card'); ?>
-                </div>
+            <div class="row g-2 flex-row-reverse">
                 <div class=" col-12 col-sm-6 col-md-8">
                     <?php thumbnail($myposts[0], 'feature_'); ?>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <?php thumbnail($myposts[1],'card'); ?>
                 </div>
             </div>
             <hr />
