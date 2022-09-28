@@ -16,7 +16,7 @@ height: 10vmin;
 /* filter: drop-shadow(3px 0 0 white) drop-shadow(0 3px 0 white) drop-shadow(-3px 0 0 white) drop-shadow(0 -3px 0 white); */
 max-height: 100px;
 min-height: 50px;
-" src="<?php echo esc_url($logo[0]); ?>"  alt="<?php echo get_bloginfo('name'); ?>" class="notranslate bi me-2 logo">
+" src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo get_bloginfo('name'); ?>" class="notranslate bi me-2 logo">
                         &nbsp;
                     <?php
                     }
@@ -109,7 +109,8 @@ min-height: 50px;
 wp_footer();
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="<?= get_template_directory_uri() . '/assets/js/footer.js?='wp_get_theme()->get('Version'); ?>"></script>
+<script src="<?= get_template_directory_uri() . '/assets/js/footer.js?var=' . wp_get_theme()->get('Version'); ?>"></script>
+
 </body>
 
 </html>
