@@ -6,6 +6,7 @@ include __DIR__ . "/functions/seo.php";
 include __DIR__ . "/functions/widget.php";
 include __DIR__ . "/functions/post_format.php";
 include __DIR__ . "/components/_thumbnails.php";
+include __DIR__ . "/components/time.php";
 function myInfo()
 {
     $json = file_get_contents(get_template_directory_uri() . '/assets/json/info.json');

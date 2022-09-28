@@ -48,3 +48,11 @@ observer.observe(body, {
     attributes: true, //configure it to listen to attribute changes
     childList: true,
 });
+
+var times = document.querySelectorAll('#postTime');
+[].forEach.call(times, function(t) {
+  // do whatever
+  var time = t.getAttribute("time")
+  t.innerHTML = utcToLocal(time);
+
+});

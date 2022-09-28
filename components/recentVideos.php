@@ -73,10 +73,12 @@
                                         <h3 class="h5">
                                             <?php echo $recentVideos[0]->post_title; ?>
                                         </h3>
-                                        <date>
+                                        <small>
                                             <i class="fa-solid fa-calendar-days"></i>
-                                            <?php echo date_format(date_create($recentVideos[0]->post_modified), "d-M Y H:i "); ?>
-                                        </date>
+                                            <?php
+                                            hein_time(strtotime($post->post_modified), 'date'); ?>
+                                            <sup><?php hein_time(strtotime($post->post_modified), 'recent'); ?></sup>
+                                        </small>
                                         <div class="low">
                                             <?php echo wp_trim_words($recentVideos[0]->post_excerpt, 24, ' ..more...'); ?>
                                         </div>

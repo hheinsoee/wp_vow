@@ -247,3 +247,12 @@ date {
 .swiper-button-next:after {
     font-size: 12pt;
 }
+.blink_me {
+    animation: blinker 0.5s linear infinite;
+    opacity: 1;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0.4;
+    }
+}

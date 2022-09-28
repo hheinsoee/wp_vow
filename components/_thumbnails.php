@@ -13,10 +13,14 @@ function thumbnail($post, $s = '')
                             <h3 class="h6">
                                 <?php echo $post->post_title; ?>
                             </h3>
-                            <date>
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <?php echo date_format(date_create($post->post_modified), "d-M Y H:i "); ?>
-                            </date>
+
+                            <div class="low">
+                                <small>
+                                    <?php
+                                    hein_time(strtotime($post->post_modified), 'date') .
+                                        hein_time(strtotime($post->post_modified), 'recent'); ?>
+                                </small>
+                            </div>
                         </div>
                         <div class="media">
                             <div style="z-index:1;position: absolute;height:100%; width:100%;" class="d-flex align-items-center justify-content-center">
@@ -90,10 +94,14 @@ function thumbnail($post, $s = '')
                         <h3 class="h6">
                             <?php echo $post->post_title; ?>
                         </h3>
-                        <date>
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <?php echo date_format(date_create($post->post_modified), "d-M Y H:i "); ?>
-                        </date>
+
+                        <div class="low">
+                            <small>
+                                <?php
+                                hein_time(strtotime($post->post_modified), 'date') .
+                                    hein_time(strtotime($post->post_modified), 'recent'); ?>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -122,10 +130,14 @@ function thumbnail($post, $s = '')
                         <h3 class="h5 pt-2">
                             <?php echo $post->post_title; ?>
                         </h3>
-                        <date>
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <?php echo date_format(date_create($post->post_modified), "d-M Y H:i "); ?>
-                        </date>
+
+                        <div class="low">
+                            <small>
+                                <?php
+                                hein_time(strtotime($post->post_modified), 'date') .
+                                    hein_time(strtotime($post->post_modified), 'recent'); ?>
+                            </small>
+                        </div>
                         <div class="low">
                             <?php echo wp_trim_words($post->post_excerpt, 30, '..more...'); ?>
                         </div>
@@ -173,10 +185,14 @@ function thumbnail($post, $s = '')
                                 <?php postFormatStyle($post->post_format ?: 'standard'); ?>
                             </span> <?php echo $post->post_title; ?>
                         </h3>
-                        <date>
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <?php echo date_format(date_create($post->post_modified), "d-M Y"); ?>
-                        </date>
+                        
+                        <div class="low">
+                            <small>
+                                <?php
+                                hein_time(strtotime($post->post_modified), 'date');?>
+                                    <sup><?php hein_time(strtotime($post->post_modified), 'recent'); ?></sup>
+                            </small>
+                        </div>
                         <?php
                         if (!$post->images['m']) {
                         ?>
@@ -215,9 +231,12 @@ function thumbnail($post, $s = '')
                         <h3 class="h6">
                             <?php echo $post->post_title; ?>
                         </h3>
-                        <date>
-                            <?php echo date_format(date_create($post->post_modified), "d-M Y"); ?>
-                        </date>
+                        <div class="low">
+                            <small>
+                                <?php
+                                hein_time(strtotime($post->post_modified), 'date'); ?>
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <hr>
@@ -246,9 +265,14 @@ function thumbnail($post, $s = '')
                         <h3 class="h6">
                             <?php echo $post->post_title; ?>
                         </h3>
-                        <date>
-                            <?php echo date_format(date_create($post->post_modified), "d-M Y"); ?>
-                        </date>
+
+                        <div class="low">
+                            <small>
+                                <?php
+                                hein_time(strtotime($post->post_modified), 'date') .
+                                    hein_time(strtotime($post->post_modified), 'recent'); ?>
+                            </small>
+                        </div>
                         <div class="small low">
 
                             <?php echo wp_trim_words($post->post_excerpt, 10, '..more...'); ?>
