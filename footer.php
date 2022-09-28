@@ -109,7 +109,7 @@ min-height: 50px;
 wp_footer();
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="<?= get_template_directory_uri() . '/assets/js/footer.js'; ?>"></script>
+<script src="<?= get_template_directory_uri() . '/assets/js/footer.js?='wp_get_theme()->get('Version'); ?>"></script>
 </body>
 
 </html>
