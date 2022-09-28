@@ -89,9 +89,9 @@
                                         </div>
                                         <script>
                                             const shareData = {
-                                                title: '<?php echo get_the_title(); ?>',
-                                                text: '<?php echo wp_trim_words($post->post_excerpt, 30, ' ..more...'); ?>',
-                                                url: '<?php echo esc_url(get_permalink()); ?>',
+                                                title: '<?php echo $recentVideos[0]->post_title; ?>',
+                                                text: '<?php echo $recentVideos[0]->post_excerpt; ?>',
+                                                url: '<?php echo $recentVideos[0]->url; ?>',
                                             }
 
                                             const btn = document.getElementById('share_<?php echo $recentvideos[0]->id; ?>');
